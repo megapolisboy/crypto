@@ -82,7 +82,7 @@ const News: React.FC<NewsProps> = ({ simplified = false }) => {
                   </Text>
                 </div>
                 <Text>
-                  {moment(news.datePublished).startOf("second").fromNow()}
+                  {moment(news?.datePublished).startOf("second").fromNow()}
                 </Text>
               </div>
             </a>
