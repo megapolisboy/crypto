@@ -40,8 +40,8 @@ const Cryptocurrencies: React.FC<CryptocurrenciesProps> = ({
       )}
       <Row gutter={[32, 32]} className="crypto-card-container">
         {cryptos?.map((crypto: any) => (
-          <Col xs={24} sm={12} lg={6} className="crypto-card" key={crypto.id}>
-            <Link to={`crypto/${crypto.id}`}>
+          <Col xs={24} sm={12} lg={6} className="crypto-card" key={crypto.rank}>
+            <Link to={`/crypto/${crypto.rank}`}>
               <Card
                 title={`${crypto.rank}. ${crypto.name}`}
                 extra={
