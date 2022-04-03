@@ -3,6 +3,7 @@ import moment from "moment";
 import { useState } from "react";
 import { useGetCryptosQuery } from "../services/cryptoApi";
 import { useGetCryptoNewsQuery } from "../services/cryptoNewsApi";
+import Loader from "./Loader";
 
 const { Text, Title } = Typography;
 const { Option } = Select;
@@ -23,7 +24,7 @@ const News: React.FC<NewsProps> = ({ simplified = false }) => {
   });
 
   if (isFetching) {
-    return <div>Loading...</div>;
+    return <Loader />;
   }
 
   return (

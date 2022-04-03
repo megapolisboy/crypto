@@ -3,6 +3,7 @@ import millify from "millify";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useGetCryptosQuery } from "../services/cryptoApi";
+import Loader from "./Loader";
 
 interface CryptocurrenciesProps {
   simplified?: boolean;
@@ -25,7 +26,7 @@ const Cryptocurrencies: React.FC<CryptocurrenciesProps> = ({
     }
   }, [cryptosList, searchTerm]);
 
-  if (isFetching) return <div>Loading ...</div>;
+  if (isFetching) return <Loader />;
 
   return (
     <>

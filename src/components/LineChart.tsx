@@ -9,6 +9,7 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
+import Loader from "./Loader";
 
 ChartJS.register(
   CategoryScale,
@@ -72,7 +73,7 @@ const LineChart: React.FC<LineChartProps> = ({
     },
   };
 
-  if (!coinHistory) return <div>Loading chart...</div>;
+  if (!coinHistory) return <Loader />;
 
   return (
     <>
